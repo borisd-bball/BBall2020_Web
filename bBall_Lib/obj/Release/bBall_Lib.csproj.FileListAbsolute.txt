@@ -1,0 +1,16 @@
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\mr_Remote_Lib.dll.config
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\mr_Remote_Lib.dll
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\mr_Remote_Lib.pdb
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\BCrypt.Net.dll
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\Gma.QrCodeNet.Encoding.Net45.dll
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\Microsoft.Web.Services3.dll
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\Newtonsoft.Json.dll
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\Spock.Davcna.dll
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\Newtonsoft.Json.pdb
+C:\Delo\BBall_2020_web\bBall_Lib\bin\Release\Newtonsoft.Json.xml
+C:\Delo\BBall_2020_web\bBall_Lib\obj\Release\bBall_Lib.csprojAssemblyReference.cache
+C:\Delo\BBall_2020_web\bBall_Lib\obj\Release\bBall_Lib.csproj.CoreCompileInputs.cache
+C:\Delo\BBall_2020_web\bBall_Lib\obj\Release\bBall_Lib.csproj.CopyComplete
+C:\Delo\BBall_2020_web\bBall_Lib\obj\Release\mr_Remote_Lib.dll
+C:\Delo\BBall_2020_web\bBall_Lib\obj\Release\mr_Remote_Lib.pdb
