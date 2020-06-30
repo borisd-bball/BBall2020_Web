@@ -1,0 +1,48 @@
+.c-fdv { background-color: #0f6fb8; }
+.c-fdv { background-color: #0f6fb8; }
+
+.c-dr { background-color: #851246; }
+
+.c-podip { background-color: #0090c1; }
+
+.c-dodip { background-color: #71b64b; }
+
+.c-strokovno { background-color: #db7635; }
+
+.c-arhiv { background-color: #484d45; }
+
+.c-alumni { background-color: #be2937; }
+
+.c-zalozba { background-color: #5d6ea3; }
+
+.c-raziskovanje { background-color: #62528f; }
+
+.c-knjiznica { background-color: #9b2534; }
+
+.lt-ie8 #navbar .two-columns, .lt-ie8 #navbar .three-columns, .lt-ie8 #navbar .four-columns .box > ul.six-columns, .lt-ie8 .box > ul.five-columns, .lt-ie8 .box > ul.four-columns, .lt-ie8 .box > ul.three-columns, .lt-ie8 .box > ul.two-columns { position: relative; left: -15px; }
+.lt-ie8 .column * { padding-right: 5px; }
+.lt-ie8 h2 a, .lt-ie8 h3 a, .lt-ie8 h4 a { color: #202020; }
+.lt-ie8 h2 a:after, .lt-ie8 h3 a:after, .lt-ie8 h4 a:after { content: ' &raquo;'; color: #999999; }
+.lt-ie8 h2 a:hover, .lt-ie8 h3 a:hover, .lt-ie8 h4 a:hover { text-decoration: none; color: #0f6fb8; }
+.lt-ie8 h2 a:hover:after, .lt-ie8 h3 a:hover:after, .lt-ie8 h4 a:hover:after { color: #0f6fb8; }
+.lt-ie8 .grid-6:last-child { width: 49%; }
+.lt-ie8 .grid-4:last-child { width: 32%; }
+.lt-ie8 .grid-4.box:last-child { width: 28%; }
+.lt-ie8 .grid-6.box:last-child { width: 45%; }
+.lt-ie8 #navbar .search { height: 39px; }
+.lt-ie8 .gallery, .lt-ie8 .employees { margin: 0 0 0 -2%; display: inline; zoom: 1; }
+.lt-ie8 .gallery li, .lt-ie8 .employees li { width: 20%; padding: 1.4%; margin: 0 0 2% 2%; }
+.lt-ie8 .employees li { width: 22.999%; padding: 0; margin: 0 0 2% 2%; }
+.lt-ie8 .wrap { overflow: hidden; position: relative; }
+.lt-ie8 .prev, .lt-ie8 .next { top: 40px; }
+.lt-ie8 .prev { left: 2px; }
+.lt-ie8 .next { right: 2px; }
+
+.lt-ie9 .tabs { display: block; width: auto; overflow: hidden; margin: 0px 0 12px -12px; padding-top: 4px; }
+.lt-ie9 .tabs dd, .lt-ie9 .tabs dt, .lt-ie9 .tabs li { float: left; display: inline; margin-left: 12px; margin-bottom: 4px; }
+.lt-ie9 .tabs dd a, .lt-ie9 .tabs dt a, .lt-ie9 .tabs li a { text-decoration: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; behavior: url(PIE.htc); position: relative; padding: 3px 9px 2px; }
+.lt-ie9 .tabs dd a.active, .lt-ie9 .tabs dt a.active, .lt-ie9 .tabs li a.active { background: #0f6fb8; color: white; border-color: #0f6fb8; }
+.lt-ie9 .tabs.big { margin: -6px 0 24px -6px; padding-top: 6px; }
+.lt-ie9 .tabs.big dd, .lt-ie9 .tabs.big li { margin-left: 6px; margin-bottom: 6px; }
+.lt-ie9 .tabs.big dd a, .lt-ie9 .tabs.big li a { padding: 6px 16px 5px; }
+.lt-ie9 .bg-color { background-color: #0f6fb8; }

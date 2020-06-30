@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web", "{B4C914E1-CC4B-49E1-975E-376366F87DF4}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{59ec71c8-917c-485d-8fd6-ef024d95a116}|s24_Reg_Lib.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Web"
+		Debug.AspNetCompiler.PhysicalPath = "Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Web"
+		Release.AspNetCompiler.PhysicalPath = "Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "59200"
+		SlnRelativePath = "Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{59EC71C8-917C-485D-8FD6-EF024D95A116} = {59EC71C8-917C-485D-8FD6-EF024D95A116}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bBall_Lib", "bBall_Lib\bBall_Lib.csproj", "{59EC71C8-917C-485D-8FD6-EF024D95A116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4C914E1-CC4B-49E1-975E-376366F87DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C914E1-CC4B-49E1-975E-376366F87DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C914E1-CC4B-49E1-975E-376366F87DF4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C914E1-CC4B-49E1-975E-376366F87DF4}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{59EC71C8-917C-485D-8FD6-EF024D95A116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EC71C8-917C-485D-8FD6-EF024D95A116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EC71C8-917C-485D-8FD6-EF024D95A116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EC71C8-917C-485D-8FD6-EF024D95A116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD59860D-8A33-4C43-817B-A25BD02A72DC}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.bovianplus.si/tfs/tfscollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = bBall_Lib\\bBall_Lib.csproj
+		SccProjectName1 = bBall_Lib
+		SccLocalPath1 = bBall_Lib
+		SccWebProject2 = true
+		SccProjectUniqueName2 = Web
+		SccProjectName2 = Web
+		SccLocalPath2 = Web
+		SccProjectEnlistmentChoice2 = 2
+	EndGlobalSection
+EndGlobal

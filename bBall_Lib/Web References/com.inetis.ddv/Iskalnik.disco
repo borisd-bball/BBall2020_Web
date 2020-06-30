@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://ddv.inetis.com/Iskalnik.asmx?wsdl" docRef="http://ddv.inetis.com/Iskalnik.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://ddv.inetis.com/Iskalnik.asmx" xmlns:q1="http://ddv.inetis.com/" binding="q1:IskalnikSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://ddv.inetis.com/Iskalnik.asmx" xmlns:q2="http://ddv.inetis.com/" binding="q2:IskalnikSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

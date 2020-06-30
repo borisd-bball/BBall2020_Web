@@ -1,0 +1,88 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DeviceData.aspx.cs" Inherits="DeviceData" MasterPageFile="Master.master" ValidateRequest="false" %>
+<%@ MasterType TypeName="Master" %>
+<%@ Import Namespace="mr.bBall_Lib" %>
+
+<asp:Content ID="cph_body" ContentPlaceHolderID="cph_body" Runat="Server">
+<form id="form" runat="server">
+<h2>Podatki naprave - ID: <%=_DevID%><a onclick="showSpinner()" href="Devices.aspx" class="button big right" style="margin:0;">Nazaj</a></h2>
+<div class="actionbox top" style="margin-left:0;margin-top:10px">
+    <div style="display:inline-block;">
+        <p>Iskanje:</p>
+        <input id="inp_iskanje" style="width:200px" onchange="filter()" onkeyup="filter()" />
+    </div>
+    <div style="float:right;display:inline-block;margin-left:10px;<%=r_napravapodatki.Items.Count==0?"display:none;":""%>">
+        <p>&nbsp;</p>
+        <a href="?a=csv" class="button big colorfull" target="_blank" style="float:right;margin:0;position:relative;bottom:3px;">Izvozi</a>
+        <a href="?id_s=<%=_DevID%>" onclick="showSpinner()" class="button big colorfull" style="float:right;margin:2;position:relative;bottom:3px;">Osveži</a>
+    </div>
+</div>
+<table class="table noalt">
+<tr>
+    <th colspan="1">Št. zapisov: <span id="stetje"></span></th>
+    <th colspan="4">
+<%--        <a href="Device.aspx" class="button colorfull right" style="margin:0;">Nova naprava</a>--%>
+    </th>
+</tr>
+<asp:Repeater ID="r_napravapodatki" runat="server">
+<HeaderTemplate>
+<tr>
+    <th style="width:20%;"><%=Splosno.Sortiranje1("anBatteryVoltage asc", _sort, "Napetost baterije (V)", _DevID)%></th>
+    <th style="width:20%;"><%=Splosno.Sortiranje1("anSensor1 asc", _sort, "Manometer 1", _DevID)%></th>
+    <th style="width:20%;"><%=Splosno.Sortiranje1("anSensor2 asc", _sort, "Manometer 2", _DevID)%></th>
+    <th style="width:20%;"><%=Splosno.Sortiranje1("adModificationDate asc", _sort, "Datum spremembe", _DevID)%></th>
+    <th></th>
+</tr>
+</HeaderTemplate>
+<ItemTemplate>
+<tr class="pt all">
+    <td><b><%#Eval("anBatteryVoltage")%></b></td>
+    <td><b><%#Eval("anSensor1")%></b></td>
+    <td><b><%#Eval("anSensor2")%></b></td>
+    <td><b><%#Eval("adModificationDate")%></b></td>
+    <td></td>
+    <%--<td><a href="?id=<%#Eval("ID")%>&a=batch" class="button greenfull">Nove meritve</a></td>--%>
+</tr>
+</ItemTemplate>
+</asp:Repeater>
+</table>
+<script type="text/javascript">
+    $(function () {
+        <%if(!string.IsNullOrWhiteSpace(_persistence)){%>
+        setTimeout(function () {
+            try {
+                var arr = eval(<%=_persistence%>);
+                for (var i = 0; i < arr.length; i++) $("#" + arr[i].id).val(arr[i].value);
+            } catch (e) { }
+            setTimeout(function () {
+                filter();
+            }, 1);
+        }, 1);
+        <%}else{%>
+        filter();
+        <%}%>
+    });
+    function filter() {
+        var val_iskanje = $("#inp_iskanje").val().toLowerCase();
+        var trs = $(".all");
+        if (val_iskanje != "") {
+            trs = trs.filter(function (index) {
+                return $(trs[index]).text().toLowerCase().indexOf(val_iskanje) > -1;
+            });
+        }
+        $(".all").hide();
+        trs.show();
+        $("#stetje").html(trs.length);
+        try {
+            var arr = new Array();
+            var objs = $(".actionbox input,.actionbox select");
+            for (var i = 0; i < objs.length; i++) arr.push({ "id": objs[i].id, "value": $(objs[i]).val() });
+            $.ajax({
+                url: "Ac.aspx?t=persistence&key=persistence_napravapodatki&s=" + JSON.stringify(arr),
+                cache: false,
+                async: true
+            });
+        } catch (e) { }
+    }
+</script>
+</form>
+</asp:Content>

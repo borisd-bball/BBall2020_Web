@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>Test</Description>
+  <Author>
+  </Author>
+  <PageHeight>11.69in</PageHeight>
+  <PageWidth>8.27in</PageWidth>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <PageHeader>
+    <Height>46.2pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <ReportItems>
+      <Textbox Name="Textbox2">
+        <Height>17.98pt</Height>
+        <Width>278.58pt</Width>
+        <Value>Testni izpis z parametri</Value>
+        <ZIndex>1</ZIndex>
+        <Left>5.60pt</Left>
+        <Top>11.00pt</Top>
+        <Style>
+          <FontSize>18pt</FontSize>
+        </Style>
+      </Textbox>
+    </ReportItems>
+  </PageHeader>
+  <Body>
+    <Height>196.0pt</Height>
+    <ReportItems>
+      <Textbox Name="Textbox3">
+        <Height>15.00pt</Height>
+        <Width>89.58pt</Width>
+        <Value>Vrednost Par1:</Value>
+        <ZIndex>1</ZIndex>
+        <Left>3.8pt</Left>
+        <Top>11.2pt</Top>
+      </Textbox>
+      <Textbox Name="txtP1">
+        <Height>15.02pt</Height>
+        <Width>80.55pt</Width>
+        <Value>={?p1}</Value>
+        <ZIndex>1</ZIndex>
+        <Left>99.30pt</Left>
+        <Top>9.50pt</Top>
+        <Style>
+          <BackgroundColor>Coral</BackgroundColor>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <Height>15.00pt</Height>
+        <Width>89.58pt</Width>
+        <Value>Vrednost Par2:</Value>
+        <ZIndex>1</ZIndex>
+        <Left>4.0pt</Left>
+        <Top>38.7pt</Top>
+      </Textbox>
+      <Textbox Name="Textbox5">
+        <Height>15.02pt</Height>
+        <Width>80.55pt</Width>
+        <Value>={?p2}</Value>
+        <ZIndex>1</ZIndex>
+        <Left>99.4pt</Left>
+        <Top>37.8pt</Top>
+        <Style>
+          <BackgroundColor>Coral</BackgroundColor>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>15.00pt</Height>
+        <Width>89.58pt</Width>
+        <Value>Vrednost CS:</Value>
+        <ZIndex>1</ZIndex>
+        <Left>5.7pt</Left>
+        <Top>72.0pt</Top>
+      </Textbox>
+      <Textbox Name="Textbox7" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>55.54pt</Height>
+        <Width>453.19pt</Width>
+        <Value>={?cs_wms}</Value>
+        <ZIndex>1</ZIndex>
+        <Left>101.10pt</Left>
+        <Top>71.10pt</Top>
+        <Style>
+          <BackgroundColor>Coral</BackgroundColor>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Columns>1</Columns>
+  </Body>
+  <PageFooter>
+    <Height>14pt</Height>
+    <ReportItems>
+      <Textbox Name="Textbox1">
+        <Top>1pt</Top>
+        <Left>10pt</Left>
+        <Height>12pt</Height>
+        <Width>3in</Width>
+        <Value>=Globals!PageNumber + ' of ' + Globals!TotalPages</Value>
+        <Style>
+          <FontSize>10pt</FontSize>
+          <FontWeight>Normal</FontWeight>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <ReportParameters >
+    <ReportParameter Name="p1">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="p2">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="cs_wms">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt />
+    </ReportParameter>
+  </ReportParameters>
+</Report>

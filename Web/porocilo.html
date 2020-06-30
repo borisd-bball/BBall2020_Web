@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+    <title></title>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <style>
+        html, body {
+            color: #808080;
+            margin: 0;
+            width: 650px;
+            font-family: Tahoma;
+        }
+
+        td {
+            padding-top: 5px;
+            font-family: Tahoma;
+            font-size: 11px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            padding-top: 10px;
+            font-family: Tahoma;
+            font-size: 11px;
+            text-align: left;
+            vertical-align: top;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0" width="650">
+        <tr>
+            <td style="color:#999999;padding-top:5px;">
+                @izdajatelj
+            </td>
+            <td style="text-align:right;">@logo</td>
+        </tr>
+        <tr>
+            <th colspan="2">@naslov</th>
+        </tr>
+    </table>
+    @html
+    <table cellpadding="0" cellspacing="0" style="width:700px;">
+        <tr>
+            <td>
+                <span style="font-size:1.1em;">@tip PRIPRAVIL | <b>@uporabnik</b> (@datum)</span>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

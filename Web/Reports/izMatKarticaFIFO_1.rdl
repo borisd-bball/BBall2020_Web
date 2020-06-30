@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>Test</Description>
+  <Author>
+  </Author>
+  <PageHeight>11.69in</PageHeight>
+  <PageWidth>8.27in</PageWidth>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <PageHeader>
+    <Height>76.7pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <ReportItems>
+      <Textbox Name="Textbox2">
+        <Height>29.99pt</Height>
+        <Width>559.48pt</Width>
+        <Value>Materijalna kartica FIFO</Value>
+        <ZIndex>1</ZIndex>
+        <Left>0.80pt</Left>
+        <Top>3.00pt</Top>
+        <Style>
+          <FontSize>20pt</FontSize>
+          <FontWeight>Bold</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <BackgroundColor>Lightgrey</BackgroundColor>
+          <BorderStyle  />
+          <BorderColor  />
+          <BorderWidth  />
+          <VerticalAlign >Middle</VerticalAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox8">
+        <Height>15.76pt</Height>
+        <Width>53.47pt</Width>
+        <Value>Filter:</Value>
+        <ZIndex>1</ZIndex>
+        <Left>2.00pt</Left>
+        <Top>39.60pt</Top>
+        <Style>
+          <FontSize>14pt</FontSize>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>11.00pt</Height>
+        <Width>72.83pt</Width>
+        <Value>={?pLokacija}</Value>
+        <ZIndex>1</ZIndex>
+        <Left>95.40pt</Left>
+        <Top>41.00pt</Top>
+        <Style>
+          <BackgroundColor>Coral</BackgroundColor>
+          <FontSize >8pt</FontSize>
+          <BorderStyle  />
+          <BorderColor  />
+          <BorderWidth  />
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>14.25pt</Height>
+        <Width>51.29pt</Width>
+        <Value>Lokacija:</Value>
+        <ZIndex>1</ZIndex>
+        <Left>55.8pt</Left>
+        <Top>41pt</Top>
+        <Style >
+          <FontSize>8pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>14.25pt</Height>
+        <Width>43.72pt</Width>
+        <Value>Artikel:</Value>
+        <ZIndex>1</ZIndex>
+        <Left>179.2pt</Left>
+        <Top>41.0pt</Top>
+        <Style >
+          <FontSize>8pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>11.00pt</Height>
+        <Width>70.52pt</Width>
+        <Value>={?pArtikel}</Value>
+        <ZIndex>1</ZIndex>
+        <Left>211.8pt</Left>
+        <Top>41.0pt</Top>
+        <Style>
+          <BackgroundColor>Coral</BackgroundColor>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontSize >8pt</FontSize>
+        </Style>
+      </Textbox>
+      <Line Name="Line1">
+        <Height>0.01pt</Height>
+        <Width>555.58pt</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Left>2.34pt</Left>
+        <Top>60.22pt</Top>
+      </Line>
+    </ReportItems>
+  </PageHeader>
+  <Body>
+    <Height>196.0pt</Height>
+    <Columns>1</Columns>
+    <ReportItems>
+      <Table Name="Table1">
+        <DataSetName>Data</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>65.8pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>53.9pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>37.7pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>43.7pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>58.7pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>49.8pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>47.7pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>49.4pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>55.7pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>59.2pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>36.3pt</Width>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>24.7pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox3">
+                      <Value>EAN</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox4">
+                      <Value>Naz. Artikla</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor  />
+                        <BorderWidth  />
+                        <VerticalAlign >Middle</VerticalAlign>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox5">
+                      <Value>ERP ID</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox6">
+                      <Value>Sl. koda</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox7">
+                      <Value>Tip</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox13">
+                      <Value>Lokacija kod.</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox14">
+                      <Value>Zaloga</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox15">
+                      <Value>ERP Dok. ID</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox16">
+                      <Value>Stranka</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox17">
+                      <Value>Datum zapisa</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox18">
+                      <Value>Tip Lok.</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>21.5pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox19">
+                      <Value>=Fields!PrimaryCode.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize >8pt</FontSize>
+                        <BorderColor  />
+                        <BorderWidth  />
+                        <TextAlign >Center</TextAlign>
+                        <VerticalAlign >Middle</VerticalAlign>
+                      </Style>
+                      <CanShrink >false</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox20">
+                      <Value>=Fields!ArticleName.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize >8pt</FontSize>
+                        <TextAlign >Center</TextAlign>
+                        <VerticalAlign >Top</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                        <PaddingLeft >1pt</PaddingLeft>
+                        <PaddingRight >1pt</PaddingRight>
+                        <PaddingTop >1pt</PaddingTop>
+                        <PaddingBottom >1pt</PaddingBottom>
+                      </Style>
+                      <CanShrink >false</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox21">
+                      <Value>=Fields!ERPArticleID.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize >8pt</FontSize>
+                        <TextAlign >Center</TextAlign>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                      <CanShrink >false</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox22">
+                      <Value>=Fields!TrackingCode.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize >8pt</FontSize>
+                        <TextAlign >Center</TextAlign>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                      <CanShrink >false</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox23">
+                      <Value>=Fields!TypeName.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize >8pt</FontSize>
+                        <TextAlign >Center</TextAlign>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                      <CanShrink >false</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox24">
+                      <Value>=Fields!LocationCode.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize >8pt</FontSize>
+                        <TextAlign >Center</TextAlign>
+                        <VerticalAlign >Middle</VerticalAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                      </Style>
+                      <CanShrink >false</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox25">
+                      <Value>=Fields!Quantity.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>#,##0.00</Format>
+                        <FontSize >8pt</FontSize>
+                        <PaddingLeft >1pt</PaddingLeft>
+                        <PaddingRight >1pt</PaddingRight>
+                        <PaddingTop >1pt</PaddingTop>
+                        <PaddingBottom >1pt</PaddingBottom>
+                      </Style>
+                      <CanShrink >true</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox26">
+                      <Value>=Fields!ERPDocumentID.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize >8pt</FontSize>
+                        <BorderColor  />
+                        <BorderWidth  />
+                        <TextAlign >Center</TextAlign>
+                        <PaddingLeft >1pt</PaddingLeft>
+                        <PaddingRight >1pt</PaddingRight>
+                        <PaddingTop >1pt</PaddingTop>
+                        <PaddingBottom >1pt</PaddingBottom>
+                      </Style>
+                      <CanShrink >true</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox27">
+                      <Value>=Fields!CompanyName.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize >8pt</FontSize>
+                        <TextAlign >Center</TextAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                        <PaddingLeft >1pt</PaddingLeft>
+                        <PaddingRight >1pt</PaddingRight>
+                        <PaddingTop >1pt</PaddingTop>
+                        <PaddingBottom >1pt</PaddingBottom>
+                      </Style>
+                      <CanShrink >true</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox28">
+                      <Value>=Fields!SystemDate.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderColor />
+                        <BorderWidth />
+                        <Format>dd.MM,yyyy HH:mm:ss</Format>
+                        <FontSize >8pt</FontSize>
+                        <TextAlign >Center</TextAlign>
+                        <PaddingLeft >1pt</PaddingLeft>
+                        <PaddingRight >1pt</PaddingRight>
+                        <PaddingTop >1pt</PaddingTop>
+                        <PaddingBottom >1pt</PaddingBottom>
+                      </Style>
+                      <CanShrink >true</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox29">
+                      <Value>=Fields!LocationTypeName.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize >8pt</FontSize>
+                        <TextAlign >Center</TextAlign>
+                        <BorderColor  />
+                        <BorderWidth  />
+                        <PaddingLeft >1pt</PaddingLeft>
+                        <PaddingRight >1pt</PaddingRight>
+                        <PaddingTop >1pt</PaddingTop>
+                        <PaddingBottom >1pt</PaddingBottom>
+                      </Style>
+                      <CanShrink >true</CanShrink>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Left>1.6pt</Left>
+        <Top>2.3pt</Top>
+      </Table>
+    </ReportItems>
+  </Body>
+  <PageFooter>
+    <Height>14pt</Height>
+    <ReportItems>
+      <Textbox Name="Textbox1">
+        <Top>1pt</Top>
+        <Left>10pt</Left>
+        <Height>12pt</Height>
+        <Width>3in</Width>
+        <Value>=Globals!PageNumber + ' of ' + Globals!TotalPages</Value>
+        <Style>
+          <FontSize>10pt</FontSize>
+          <FontWeight>Normal</FontWeight>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>datasource</DataSourceName>
+        <Timeout>30</Timeout>
+        <CommandText>exec dbo.sp_queryArticleLocationFIFO_mr @OwnerID, @ArtcileCode, @LocationCode</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@ArtcileCode">
+            <Value>={?pArtikel}</Value>
+          </QueryParameter>
+          <QueryParameter Name="@LocationCode">
+            <Value>={?pLokacija}</Value>
+          </QueryParameter>
+          <QueryParameter Name="@OwnerID">
+            <Value>={?pOwner}</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields>
+        <Field Name="ArticleID">
+          <DataField>ArticleID</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="LocationID">
+          <DataField>LocationID</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="SystemDate">
+          <DataField>SystemDate</DataField>
+          <TypeName>System.DateTime</TypeName>
+        </Field>
+        <Field Name="LocationCode">
+          <DataField>LocationCode</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="LocationTypeName">
+          <DataField>LocationTypeName</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="LocationName">
+          <DataField>LocationName</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="PrimaryCode">
+          <DataField>PrimaryCode</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="ERPArticleID">
+          <DataField>ERPArticleID</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="ArticleName">
+          <DataField>ArticleName</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="MeasureUnitID">
+          <DataField>MeasureUnitID</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="Code">
+          <DataField>Code</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="ERPDocumentID">
+          <DataField>ERPDocumentID</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="ERPDocDate">
+          <DataField>ERPDocDate</DataField>
+          <TypeName>System.DateTime</TypeName>
+        </Field>
+        <Field Name="CustomerID">
+          <DataField>CustomerID</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="DocumentID">
+          <DataField>DocumentID</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="TermDocumentsDate">
+          <DataField>TermDocumentsDate</DataField>
+          <TypeName>System.DateTime</TypeName>
+        </Field>
+        <Field Name="TypeName">
+          <DataField>TypeName</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="StatusName">
+          <DataField>StatusName</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="ERPDocumentIDSupply">
+          <DataField>ERPDocumentIDSupply</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="ERPDocDateSupply">
+          <DataField>ERPDocDateSupply</DataField>
+          <TypeName>System.DateTime</TypeName>
+        </Field>
+        <Field Name="CustomerIDSupply">
+          <DataField>CustomerIDSupply</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="CompanyNameSupply">
+          <DataField>CompanyNameSupply</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="DocumentIDSupply">
+          <DataField>DocumentIDSupply</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="SystemDateSupply">
+          <DataField>SystemDateSupply</DataField>
+          <TypeName>System.DateTime</TypeName>
+        </Field>
+        <Field Name="TypeNameSupply">
+          <DataField>TypeNameSupply</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="TrackingCode">
+          <DataField>TrackingCode</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <DataSources >
+    <DataSource Name="datasource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>={?cs_wms}</ConnectString>
+        <IntegratedSecurity>false</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <ReportParameters >
+    <ReportParameter Name="pOwner">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>mirc</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="cs_wms">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Server=192.168.10.25;DataBase=mrWMS;User Id=comtic;Password=sony;Application Name=mrWMS_Ant;</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="pLokacija">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>%</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="pArtikel">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>%</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+  </ReportParameters>
+</Report>

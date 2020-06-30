@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>Test</Description>
+  <Author>
+  </Author>
+  <PageHeight>5in</PageHeight>
+  <PageWidth>4.13in</PageWidth>
+  <Width>5.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <PageHeader>
+    <Height>27.3pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <ReportItems>
+      <Textbox Name="Textbox2">
+        <Height>24.73pt</Height>
+        <Width>140.86pt</Width>
+        <Value>Antela d.o.o.</Value>
+        <ZIndex>1</ZIndex>
+        <Left>0.80pt</Left>
+        <Top>3.00pt</Top>
+        <Style>
+          <FontSize>20pt</FontSize>
+          <FontWeight>Bold</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <BackgroundColor>
+          </BackgroundColor>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+      </Textbox>
+    </ReportItems>
+  </PageHeader>
+  <Body>
+    <Height>177.9pt</Height>
+    <Columns>1</Columns>
+    <ReportItems>
+      <Table Name="Table1">
+        <DataSetName>Data</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderColor  />
+          <BorderWidth  />
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>260.1pt</Width>
+          </TableColumn>
+        </TableColumns>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>151.9pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems >
+                    <CustomReportItem Name="CustomReportItem1">
+                      <Type>BarCode128</Type>
+                      <CustomProperties>
+                        <CustomProperty>
+                          <Name>Code</Name>
+                          <Value>={acTrackingCode}</Value>
+                        </CustomProperty>
+                      </CustomProperties>
+                      <Style>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </CustomReportItem>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Left>0.8pt</Left>
+        <Top>0.0pt</Top>
+      </Table>
+    </ReportItems>
+  </Body>
+  <PageFooter>
+    <Height>7.8pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query >
+        <DataSourceName>datasource</DataSourceName>
+        <Timeout>30</Timeout>
+        <CommandText>Select * FROM TrackingCodeGeneratorSettings WHERE anPrinted = 0</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@OwnerID">
+            <Value>={?pOwner}</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields >
+        <Field Name="anID">
+          <DataField>anID</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="acTrackingCode">
+          <DataField>acTrackingCode</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="acBefore">
+          <DataField>acBefore</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="acAfter">
+          <DataField>acAfter</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="anPrinted">
+          <DataField>anPrinted</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="acNote">
+          <DataField>acNote</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="adTimeMod">
+          <DataField>adTimeMod</DataField>
+          <TypeName>System.DateTime</TypeName>
+        </Field>
+        <Field Name="acUserMod">
+          <DataField>acUserMod</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <DataSources >
+    <DataSource Name="datasource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>={?cs_wms}</ConnectString>
+        <IntegratedSecurity>false</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <ReportParameters >
+    <ReportParameter Name="pOwner">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>mirc</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="cs_wms">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Server=192.168.10.25;DataBase=mrWMS;User Id=comtic;Password=sony;Application Name=mrWMS_Ant;</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+  </ReportParameters>
+</Report>
